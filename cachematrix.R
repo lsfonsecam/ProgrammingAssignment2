@@ -23,7 +23,7 @@ makeCacheMatrix <- function(m = matrix()) {
 ## inverse of the matrix that is entered in this function
 
 cacheSolve <- function(w = matrix()){
-  if (w[1] == makeCacheMatrix(m)$matrix[1] ) {
+  if (all.equal(w,makeCacheMatrix(m)$matrix)== TRUE) {
     inv <- makeCacheMatrix(m)$inverse
     if (!is.null(inv)) {
       return(inv)
